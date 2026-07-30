@@ -1,0 +1,8 @@
+{
+  "sections": {
+    "main": {
+      "type": "horeca-request-form"
+    }
+  },
+  "order": ["main"]
+}

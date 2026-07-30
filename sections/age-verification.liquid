@@ -1,0 +1,101 @@
+{% comment %}
+  sections/age-verification.liquid
+  Plaats {% section 'age-verification' %} direct na de openende <body> tag
+  in layout/theme.liquid, zodat dit op elke pagina verschijnt.
+{% endcomment %}
+
+<div id="vinami-age-gate" class="vinami-age-gate" data-min-age="{{ section.settings.minimum_age }}">
+  <div class="vinami-age-gate__panel">
+    <p class="vinami-eyebrow">{{ section.settings.eyebrow }}</p>
+    <h2 class="vinami-heading">{{ section.settings.heading }}</h2>
+    <p class="vinami-age-gate__text">{{ section.settings.description }}</p>
+
+    <form id="vinami-age-gate-form" class="vinami-age-gate__form">
+      <div>
+        <label for="vinami-dob">{{ section.settings.dob_label }}</label>
+        <input type="date" id="vinami-dob" name="dob" required>
+      </div>
+      <label class="vinami-age-gate__remember">
+        <input type="checkbox" id="vinami-remember" checked>
+        {{ section.settings.remember_label }}
+      </label>
+      <button type="submit" class="button">{{ section.settings.confirm_label }}</button>
+    </form>
+
+    <p id="vinami-age-gate-error" class="vinami-age-gate__error" hidden>{{ section.settings.error_message }}</p>
+  </div>
+</div>
+
+<script>
+(function () {
+  var gate = document.getElementById('vinami-age-gate');
+  if (!gate) return;
+
+  var minAge = parseInt(gate.dataset.minAge, 10) || 18;
+  var cookieName = 'vinami_age_verified';
+
+  function getCookie(name) {
+    var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+    return match ? match[2] : null;
+  }
+
+  function setCookie(name, value, days) {
+    var expires = '';
+    if (days) {
+      var date = new Date();
+      date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+      expires = '; expires=' + date.toUTCString();
+    }
+    document.cookie = name + '=' + value + expires + '; path=/';
+  }
+
+  if (getCookie(cookieName) === 'true') {
+    gate.style.display = 'none';
+  } else {
+    document.body.classList.add('vinami-age-gate-active');
+  }
+
+  var form = document.getElementById('vinami-age-gate-form');
+  var errorEl = document.getElementById('vinami-age-gate-error');
+
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    var dobValue = document.getElementById('vinami-dob').value;
+    if (!dobValue) return;
+
+    var dob = new Date(dobValue);
+    var today = new Date();
+    var age = today.getFullYear() - dob.getFullYear();
+    var monthDiff = today.getMonth() - dob.getMonth();
+    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < dob.getDate())) {
+      age--;
+    }
+
+    if (age >= minAge) {
+      var remember = document.getElementById('vinami-remember').checked;
+      setCookie(cookieName, 'true', remember ? 365 : 0);
+      gate.style.display = 'none';
+      document.body.classList.remove('vinami-age-gate-active');
+    } else {
+      errorEl.hidden = false;
+    }
+  });
+})();
+</script>
+
+{% schema %}
+{
+  "name": "Leeftijdsverificatie",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Voortekst", "default": "Voor je verdergaat" },
+    { "type": "text", "id": "heading", "label": "Titel", "default": "Ben je 18 jaar of ouder?" },
+    { "type": "textarea", "id": "description", "label": "Beschrijving", "default": "Vinami verkoopt alcoholhoudende producten. Bevestig je geboortedatum om verder te gaan." },
+    { "type": "text", "id": "dob_label", "label": "Label geboortedatum", "default": "Geboortedatum" },
+    { "type": "text", "id": "remember_label", "label": "Label onthouden", "default": "Onthoud mij op dit apparaat" },
+    { "type": "text", "id": "confirm_label", "label": "Knoptekst", "default": "Bevestigen" },
+    { "type": "text", "id": "error_message", "label": "Foutmelding", "default": "Je moet 18 jaar of ouder zijn om Vinami te bezoeken." },
+    { "type": "range", "id": "minimum_age", "label": "Minimumleeftijd", "min": 16, "max": 21, "step": 1, "default": 18 }
+  ],
+  "presets": [{ "name": "Leeftijdsverificatie" }]
+}
+{% endschema %}

@@ -1,0 +1,177 @@
+/* vinami-style.css
+   Basisstijl voor Vinami, gebaseerd op de Aesop x Porsche richting:
+   rustige, gedempte basis met een precieze, technische laag erbovenop. */
+
+:root {
+  --vinami-cream: #f2ede4;
+  --vinami-stone: #ddd6c8;
+  --vinami-black: #14120f;
+  --vinami-bordeaux: #5c1122;
+  --vinami-text: #1f1c18;
+  --vinami-text-muted: #6b6459;
+  --vinami-border: #c9c1b0;
+
+  --vinami-font-serif: "Fraunces", Georgia, serif;
+  --vinami-font-sans: "Neue Montreal", "Helvetica Neue", Arial, sans-serif;
+
+  --vinami-space-xs: 8px;
+  --vinami-space-sm: 16px;
+  --vinami-space-md: 32px;
+  --vinami-space-lg: 64px;
+  --vinami-space-xl: 120px;
+}
+
+body {
+  background-color: var(--vinami-cream);
+  color: var(--vinami-text);
+  font-family: var(--vinami-font-sans);
+}
+
+.vinami-heading,
+body h1,
+body h2,
+body h3 {
+  font-family: var(--vinami-font-serif);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+.vinami-eyebrow {
+  font-family: var(--vinami-font-sans);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--vinami-text-muted);
+}
+
+/* Leeftijdsverificatie */
+
+body.vinami-age-gate-active {
+  overflow: hidden;
+}
+
+.vinami-age-gate {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--vinami-black);
+  color: var(--vinami-cream);
+  padding: var(--vinami-space-md);
+}
+
+.vinami-age-gate__panel {
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+}
+
+.vinami-age-gate__text {
+  color: var(--vinami-stone);
+  margin: var(--vinami-space-sm) 0 var(--vinami-space-md);
+}
+
+.vinami-age-gate__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--vinami-space-sm);
+}
+
+.vinami-age-gate__form input[type="date"] {
+  background: transparent;
+  border: 1px solid var(--vinami-stone);
+  color: var(--vinami-cream);
+  padding: var(--vinami-space-xs) var(--vinami-space-sm);
+}
+
+.vinami-age-gate__remember {
+  display: flex;
+  align-items: center;
+  gap: var(--vinami-space-xs);
+  font-size: 0.85rem;
+  color: var(--vinami-stone);
+}
+
+.vinami-age-gate__error {
+  color: #e2a0a0;
+  margin-top: var(--vinami-space-sm);
+}
+
+/* Specificatieblok per wijn, technische fiche in Porsche stijl */
+
+.vinami-spec-block {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  border-top: 1px solid var(--vinami-border);
+  margin: var(--vinami-space-md) 0;
+}
+
+.vinami-spec-block__item {
+  padding: var(--vinami-space-sm) var(--vinami-space-sm) var(--vinami-space-sm) 0;
+  border-bottom: 1px solid var(--vinami-border);
+}
+
+.vinami-spec-block__item dt {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--vinami-text-muted);
+  margin-bottom: var(--vinami-space-xs);
+}
+
+.vinami-spec-block__item dd {
+  font-family: var(--vinami-font-sans);
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* Horecapagina */
+
+.vinami-horeca {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: var(--vinami-space-xl) var(--vinami-space-md);
+}
+
+.vinami-horeca__intro {
+  margin-bottom: var(--vinami-space-lg);
+}
+
+.vinami-horeca__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--vinami-space-sm);
+}
+
+.vinami-horeca__form label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--vinami-text-muted);
+}
+
+.vinami-horeca__form input,
+.vinami-horeca__form textarea {
+  border: 1px solid var(--vinami-border);
+  background: transparent;
+  padding: var(--vinami-space-xs) var(--vinami-space-sm);
+  font-family: var(--vinami-font-sans);
+  color: var(--vinami-text);
+}
+
+.vinami-horeca__success {
+  color: var(--vinami-bordeaux);
+  font-weight: 500;
+}
+
+/* Filters, rustige lijnen met technische labels */
+
+.vinami-filters .facets__label,
+.vinami-filters facet-filters-form legend {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--vinami-text-muted);
+}

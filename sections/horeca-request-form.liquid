@@ -1,0 +1,73 @@
+{% comment %}
+  sections/horeca-request-form.liquid
+  Wordt gebruikt via templates/page.horeca.json.
+  Maakt gebruik van Shopify's ingebouwde contactformulier, met een tag
+  zodat je aanvragen makkelijk kunt herkennen in je klant of e-mail overzicht.
+  Stel het ontvangende e-mailadres in via Instellingen > Meldingen > Contactformulier.
+{% endcomment %}
+
+<section class="vinami-horeca">
+  <div class="vinami-horeca__intro">
+    <p class="vinami-eyebrow">{{ section.settings.eyebrow }}</p>
+    <h1 class="vinami-heading">{{ section.settings.heading }}</h1>
+    <div class="vinami-horeca__body">{{ section.settings.body }}</div>
+  </div>
+
+  {% form 'contact', class: 'vinami-horeca__form' %}
+    {% if form.posted_successfully? %}
+      <p class="vinami-horeca__success">{{ section.settings.success_message }}</p>
+    {% endif %}
+
+    {% if form.errors %}
+      <p class="vinami-horeca__error">{{ form.errors | default_errors }}</p>
+    {% endif %}
+
+    <input type="hidden" name="contact[tags]" value="horeca-aanvraag">
+
+    <div>
+      <label for="ContactFormName">Naam</label>
+      <input type="text" id="ContactFormName" name="contact[name]" required>
+    </div>
+
+    <div>
+      <label for="ContactFormCompany">Bedrijfsnaam</label>
+      <input type="text" id="ContactFormCompany" name="contact[Bedrijfsnaam]" required>
+    </div>
+
+    <div>
+      <label for="ContactFormKvk">KVK nummer</label>
+      <input type="text" id="ContactFormKvk" name="contact[KVK nummer]">
+    </div>
+
+    <div>
+      <label for="ContactFormEmail">E-mailadres</label>
+      <input type="email" id="ContactFormEmail" name="contact[email]" required>
+    </div>
+
+    <div>
+      <label for="ContactFormVolume">Verwachte afname per maand</label>
+      <input type="text" id="ContactFormVolume" name="contact[Verwachte afname]">
+    </div>
+
+    <div>
+      <label for="ContactFormMessage">Toelichting</label>
+      <textarea id="ContactFormMessage" name="contact[body]" rows="4"></textarea>
+    </div>
+
+    <button type="submit" class="button">{{ section.settings.submit_label }}</button>
+  {% endform %}
+</section>
+
+{% schema %}
+{
+  "name": "Horeca aanvraag",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Voortekst", "default": "Voor de horeca" },
+    { "type": "text", "id": "heading", "label": "Titel", "default": "Vinami voor jouw zaak" },
+    { "type": "richtext", "id": "body", "label": "Introductietekst" },
+    { "type": "text", "id": "submit_label", "label": "Knoptekst", "default": "Aanvraag versturen" },
+    { "type": "text", "id": "success_message", "label": "Bevestigingsbericht", "default": "Bedankt, we nemen binnen twee werkdagen contact op." }
+  ],
+  "presets": [{ "name": "Horeca aanvraag" }]
+}
+{% endschema %}

@@ -1,0 +1,73 @@
+{% comment %}
+  blocks/wine-spec-block.liquid
+  Theme block voor het productscherm. Voeg 'm via de thema-editor toe
+  aan de "Productdetails" groep op een productpagina.
+
+  Vereist metafields in namespace "vinami" op producten:
+    vinami.regio               (single line text)
+    vinami.druif                (single line text)
+    vinami.jaargang             (single line text of number)
+    vinami.alcoholpercentage    (number, decimal)
+    vinami.serveertemperatuur   (single line text)
+
+  Zie LEESMIJ.md voor hoe je deze metafields aanmaakt.
+{% endcomment %}
+
+{% liquid
+  assign spec_product = closest.product
+  assign regio = spec_product.metafields.vinami.regio
+  assign druif = spec_product.metafields.vinami.druif
+  assign jaargang = spec_product.metafields.vinami.jaargang
+  assign alcohol = spec_product.metafields.vinami.alcoholpercentage
+  assign temperatuur = spec_product.metafields.vinami.serveertemperatuur
+%}
+
+<dl class="vinami-spec-block" {{ block.shopify_attributes }}>
+  {% if regio != blank %}
+    <div class="vinami-spec-block__item">
+      <dt>Regio</dt>
+      <dd>{{ regio }}</dd>
+    </div>
+  {% endif %}
+
+  {% if druif != blank %}
+    <div class="vinami-spec-block__item">
+      <dt>Druif</dt>
+      <dd>{{ druif }}</dd>
+    </div>
+  {% endif %}
+
+  {% if jaargang != blank %}
+    <div class="vinami-spec-block__item">
+      <dt>Jaargang</dt>
+      <dd>{{ jaargang }}</dd>
+    </div>
+  {% endif %}
+
+  {% if alcohol != blank %}
+    <div class="vinami-spec-block__item">
+      <dt>Alcoholpercentage</dt>
+      <dd>{{ alcohol }}%</dd>
+    </div>
+  {% endif %}
+
+  {% if temperatuur != blank %}
+    <div class="vinami-spec-block__item">
+      <dt>Serveertemperatuur</dt>
+      <dd>{{ temperatuur }}</dd>
+    </div>
+  {% endif %}
+</dl>
+
+{% schema %}
+{
+  "name": "Wijnspecificaties",
+  "tag": null,
+  "settings": [],
+  "presets": [
+    {
+      "name": "Wijnspecificaties"
+    }
+  ]
+}
+{% endschema %}
