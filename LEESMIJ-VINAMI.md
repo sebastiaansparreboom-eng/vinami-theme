@@ -8,7 +8,9 @@ De volledige Aesop x Porsche restyle (kleuren, typografie, scherpe hoeken, dunne
 
 `assets/vinami-style.css` bevat aanvullende stijl voor de leeftijdscheck, het specificatieblok en de horecapagina (crème/steengrijs met bordeauxrood/zwart als precisie-accent), en leest de kleuren/lettertypen uit dezelfde thema-instellingen. Dit bestand wordt automatisch geladen via `snippets/stylesheets.liquid`, dus je hoeft hier niets voor te doen.
 
-De homepage (`templates/index.json`) heeft naast de hero en het productoverzicht ook een marquee met wijnregio's, een verhalend blok over de filosofie van Vinami, en een sectie gericht op horeca-klanten (link naar de `horeca`-pagina, zie hieronder).
+De homepage (`templates/index.json`) heeft naast de hero en het productoverzicht ook: een marquee met wijnregio's, een categorie-grid ("Ontdek per type"), een verhalend blok over de filosofie van Vinami, een kwaliteit- en vertrouwenbalk, en een sectie gericht op horeca-klanten (link naar de `horeca`-pagina, zie hieronder).
+
+Het categorie-grid linkt naar vijf collecties met de handles `rood`, `wit`, `rose`, `mousserend` en `versterkt`. Maak deze collecties aan onder Onlinewinkel > Collecties met precies deze handles (of pas de links in het grid-blok aan naar de handles die je al gebruikt), anders krijgen bezoekers een niet-gevonden pagina bij een klik.
 
 Placeholder-teksten (verzending, retour, aanbevelingen op de productpagina, en de nieuwsbrief-aanmelding in de footer) zijn vertaald naar het Nederlands en aangepast aan wijn. De footer gebruikt nu het donkere kleurenschema.
 
