@@ -1,0 +1,448 @@
+/* Vinami — horeca funnel landing page
+   Brand: warm terracotta/cream (echte Vinami-huisstijl) met de rust en
+   witruimte van Aesop's editorial stijl. */
+
+:root {
+  --vinami-terracotta: #a6402a;
+  --vinami-terracotta-dark: #7f2f1f;
+  --vinami-cream: #fbf1ec;
+  --vinami-cream-soft: #fdf8f5;
+  --vinami-text: #1c1a18;
+  --vinami-text-muted: #6b5d54;
+  --vinami-border: #e6d6cb;
+  --vinami-white: #ffffff;
+
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-heading: "Poppins", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Inter", "Helvetica Neue", Arial, sans-serif;
+
+  --radius: 16px;
+  --radius-sm: 10px;
+  --max-width: 1120px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--vinami-cream);
+  color: var(--vinami-text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 0 0 0.5em;
+  color: var(--vinami-text);
+}
+
+h1 { font-size: clamp(2rem, 4vw + 1rem, 3.25rem); }
+h2 { font-size: clamp(1.6rem, 2.5vw + 1rem, 2.25rem); }
+h3 { font-size: 1.15rem; }
+
+p { margin: 0 0 1em; }
+
+a {
+  color: var(--vinami-terracotta);
+}
+
+.eyebrow {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--vinami-terracotta);
+  margin: 0 0 0.75em;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--vinami-terracotta);
+  color: var(--vinami-white);
+  padding: 12px 20px;
+  z-index: 100;
+}
+.skip-link:focus {
+  left: 0;
+}
+
+/* Header */
+
+.topbar {
+  background: var(--vinami-terracotta);
+  color: var(--vinami-cream);
+  padding: 18px 0;
+}
+.topbar__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.75rem;
+  color: var(--vinami-cream);
+  text-decoration: none;
+}
+.topbar__contact {
+  color: var(--vinami-cream);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+/* Layout helpers */
+
+.section {
+  padding: 88px 24px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+.section-title {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+/* Placeholder media (no real photography yet) */
+
+.placeholder-media {
+  position: relative;
+  border-radius: var(--radius);
+  background:
+    linear-gradient(135deg, rgba(166,64,42,0.10) 25%, transparent 25%) -20px 0/40px 40px,
+    linear-gradient(135deg, transparent 75%, rgba(166,64,42,0.10) 75%) -20px 0/40px 40px,
+    var(--vinami-white);
+  border: 1px solid var(--vinami-border);
+  min-height: 260px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+.placeholder-media__label {
+  display: block;
+  width: 100%;
+  padding: 12px 16px;
+  background: rgba(28, 26, 24, 0.72);
+  color: var(--vinami-cream);
+  font-size: 0.75rem;
+  font-family: var(--font-heading);
+  letter-spacing: 0.03em;
+}
+
+/* Buttons */
+
+.button {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  padding: 15px 28px;
+  border-radius: 999px;
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+.button:hover { opacity: 0.88; }
+.button--primary {
+  background: var(--vinami-terracotta);
+  color: var(--vinami-white);
+}
+.button--ghost {
+  background: transparent;
+  border-color: var(--vinami-terracotta);
+  color: var(--vinami-terracotta);
+}
+
+/* Hero */
+
+.hero {
+  padding: 64px 24px 88px;
+}
+.hero__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+.hero__lead {
+  font-size: 1.1rem;
+  color: var(--vinami-text-muted);
+  max-width: 44ch;
+}
+.hero__actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+.hero__media {
+  aspect-ratio: 4 / 5;
+}
+
+/* Story */
+
+.story__inner {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 56px;
+  align-items: center;
+}
+.story__media {
+  aspect-ratio: 4 / 5;
+}
+.pull-quote {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.4rem;
+  color: var(--vinami-terracotta-dark);
+  border-left: 3px solid var(--vinami-terracotta);
+  padding-left: 20px;
+  margin: 32px 0 0;
+}
+
+/* Recognize card */
+
+.recognize__card {
+  background: var(--vinami-white);
+  border: 1px solid var(--vinami-border);
+  border-radius: var(--radius);
+  padding: 48px;
+}
+.recognize__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 20px;
+}
+.recognize__list li {
+  position: relative;
+  padding-left: 28px;
+  font-size: 1.05rem;
+}
+.recognize__list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--vinami-terracotta);
+}
+
+/* Reasons */
+
+.reasons__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+.reason__number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--vinami-text);
+  color: var(--vinami-cream);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+.reason p {
+  color: var(--vinami-text-muted);
+}
+
+/* Case studies */
+
+.cases__list {
+  display: grid;
+  gap: 56px;
+}
+.case {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 40px;
+  align-items: center;
+}
+.case__media {
+  aspect-ratio: 4 / 3;
+  min-height: 200px;
+}
+.case__meta {
+  font-family: var(--font-serif);
+  font-style: italic;
+  color: var(--vinami-terracotta);
+  margin-bottom: 1em;
+}
+
+/* Signup */
+
+.signup {
+  background: var(--vinami-white);
+  border-radius: var(--radius);
+  border: 1px solid var(--vinami-border);
+}
+.signup__inner {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 56px;
+  align-items: start;
+}
+.signup__direct {
+  font-size: 0.95rem;
+  color: var(--vinami-text-muted);
+}
+.signup__form {
+  display: grid;
+  gap: 20px;
+}
+.field-group {
+  border: 1px solid var(--vinami-border);
+  border-radius: var(--radius-sm);
+  padding: 16px 20px;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+}
+.field-group legend {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 0 6px;
+}
+.radio {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+}
+.field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.field {
+  display: grid;
+  gap: 6px;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+.field input,
+.field textarea {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 1rem;
+  padding: 12px 14px;
+  border: 1px solid var(--vinami-border);
+  border-radius: var(--radius-sm);
+  background: var(--vinami-cream-soft);
+  color: var(--vinami-text);
+}
+.field input:focus,
+.field textarea:focus {
+  outline: 2px solid var(--vinami-terracotta);
+  outline-offset: 1px;
+}
+.signup__form .button {
+  justify-self: start;
+}
+.signup__disclaimer {
+  font-size: 0.8rem;
+  color: var(--vinami-text-muted);
+  margin: 0;
+}
+.signup__confirmation {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.3rem;
+  color: var(--vinami-terracotta-dark);
+  margin: 0;
+}
+.signup__error {
+  color: var(--vinami-terracotta-dark);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Footer */
+
+.footer {
+  background: var(--vinami-terracotta);
+  color: var(--vinami-cream);
+  padding: 40px 24px;
+  margin-top: 40px;
+}
+.footer__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px 32px;
+  justify-content: space-between;
+}
+.logo--footer {
+  font-size: 1.4rem;
+}
+.footer a {
+  color: var(--vinami-cream);
+  text-decoration: underline;
+}
+.footer p {
+  margin: 0;
+}
+
+/* Responsive */
+
+@media (max-width: 860px) {
+  .hero__inner,
+  .story__inner,
+  .case,
+  .signup__inner {
+    grid-template-columns: 1fr;
+  }
+  .story__media,
+  .hero__media {
+    order: -1;
+  }
+  .reasons__grid {
+    grid-template-columns: 1fr;
+  }
+  .field-row {
+    grid-template-columns: 1fr;
+  }
+  .section {
+    padding: 64px 20px;
+  }
+  .recognize__card {
+    padding: 32px 24px;
+  }
+}
