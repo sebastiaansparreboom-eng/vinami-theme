@@ -310,7 +310,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p>Reliable shipping</p>",
+                        "text": "<p>Betrouwbare verzending</p>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
@@ -392,7 +392,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p>Flexible returns</p>",
+                        "text": "<p>Eenvoudig retourneren</p>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
@@ -487,7 +487,7 @@
           "type": "text",
           "name": "t:names.header",
           "settings": {
-            "text": "<h3>You may also like </h3>",
+            "text": "<h3>Wellicht ook iets voor u</h3>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",

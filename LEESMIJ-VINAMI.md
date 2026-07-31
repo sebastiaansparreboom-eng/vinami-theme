@@ -4,7 +4,13 @@ Dit is je Horizon conceptthema (geëxporteerd op 30 juli 2026) met de Vinami sti
 
 ## Wat is toegevoegd
 
-`assets/vinami-style.css` bevat de basisstijl in de Aesop x Porsche richting (crème/steengrijs met bordeauxrood/zwart als precisie-accent). Dit bestand wordt automatisch geladen via `snippets/stylesheets.liquid`, dus je hoeft hier niets voor te doen.
+De volledige Aesop x Porsche restyle (kleuren, typografie, scherpe hoeken, dunne lijnen i.p.v. schaduw) staat in `config/settings_data.json`, dus zichtbaar en aanpasbaar via Thema-editor > Thema-instellingen > Kleuren / Typografie. Koppen en verhalende tekst gebruiken Fraunces, body-tekst en specificaties gebruiken Inter.
+
+`assets/vinami-style.css` bevat aanvullende stijl voor de leeftijdscheck, het specificatieblok en de horecapagina (crème/steengrijs met bordeauxrood/zwart als precisie-accent), en leest de kleuren/lettertypen uit dezelfde thema-instellingen. Dit bestand wordt automatisch geladen via `snippets/stylesheets.liquid`, dus je hoeft hier niets voor te doen.
+
+De homepage (`templates/index.json`) heeft naast de hero en het productoverzicht ook een marquee met wijnregio's, een verhalend blok over de filosofie van Vinami, en een sectie gericht op horeca-klanten (link naar de `horeca`-pagina, zie hieronder).
+
+Placeholder-teksten (verzending, retour, aanbevelingen op de productpagina, en de nieuwsbrief-aanmelding in de footer) zijn vertaald naar het Nederlands en aangepast aan wijn. De footer gebruikt nu het donkere kleurenschema.
 
 `sections/age-verification.liquid` is de leeftijdscheck. Deze staat al ingehaakt in `layout/theme.liquid`, direct na de openende `<body>` tag, en verschijnt dus op elke pagina totdat een bezoeker zijn geboortedatum bevestigt.
 

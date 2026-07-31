@@ -11,8 +11,8 @@
   --vinami-text-muted: #6b6459;
   --vinami-border: #c9c1b0;
 
-  --vinami-font-serif: "Fraunces", Georgia, serif;
-  --vinami-font-sans: "Neue Montreal", "Helvetica Neue", Arial, sans-serif;
+  --vinami-font-serif: var(--font-heading--family, "Fraunces", Georgia, serif);
+  --vinami-font-sans: var(--font-body--family, "Inter", "Helvetica Neue", Arial, sans-serif);
 
   --vinami-space-xs: 8px;
   --vinami-space-sm: 16px;
