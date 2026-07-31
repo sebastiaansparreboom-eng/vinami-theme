@@ -27,9 +27,17 @@ Puur HTML/CSS/JS, geen build-stap nodig.
    ```
    (en verwijder dan de bijbehorende `.placeholder-media` CSS-regel niet per se — die blijft gewoon ongebruikt).
 3. **Logo.** De huidige "Vinami"-tekst in `Playfair Display italic` is een
-   vlotte vervanger voor het echte beeldmerk. Heb je een logobestand
-   (svg/png)? Vervang dan `<a class="logo" href="#top">Vinami</a>` door een
-   `<img>`.
+   vlotte vervanger voor het echte beeldmerk (ik kan geen bestanden uit de
+   chat overnemen als afbeelding, alleen bestanden die je hier uploadt). Stuur
+   het logobestand (svg of png met transparante achtergrond) aan, zet het in
+   `assets/`, en vervang in zowel de header als de footer
+   ```html
+   <span class="logo">Vinami</span>
+   ```
+   door
+   ```html
+   <img class="logo-img" src="assets/logo.svg" alt="Vinami">
+   ```
 
 ## Optioneel
 

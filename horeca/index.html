@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vinami voor horeca — Haal meer uit jouw wijnkaart</title>
-<meta name="description" content="Vinami helpt restaurants, wijnbars en speciaalzaken aan een wijnkaart die beter verkoopt. Vraag een gratis fles aan of plan een vrijblijvend gesprek.">
+<title>Vinami voor horeca: haal meer uit jouw wijnkaart</title>
+<meta name="description" content="Vinami helpt restaurants, wijnbars en speciaalzaken aan een wijnkaart die beter verkoopt. Vraag een gratis fles aan of neem contact op.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -16,7 +16,10 @@
 
 <header class="topbar">
   <div class="topbar__inner">
-    <a class="logo" href="#top">Vinami</a>
+    <a class="logo-link" href="#top">
+      <!-- Vervang door het echte logobestand zodra aangeleverd, zie horeca/README.md -->
+      <span class="logo">Vinami</span>
+    </a>
     <a class="topbar__contact" href="tel:+31612993707">📞 +31 (0)6 1299 3707</a>
   </div>
 </header>
@@ -28,12 +31,12 @@
       <div class="hero__content">
         <p class="eyebrow">Voor horeca &amp; wijnhandel</p>
         <h1>Je ontving zojuist een persoonlijke analyse van je wijnkaart.</h1>
-        <p class="hero__lead">Ontdek hoe eenvoudig het is om meer uit je wijnkaart te halen — betere marges,
+        <p class="hero__lead">Ontdek hoe eenvoudig het is om meer uit je wijnkaart te halen: betere marges,
           betere kwaliteit en gasten die makkelijker een keuze maken. Vraag een gratis fles aan om kennis te
-          maken, of plan meteen een vrijblijvend gesprek.</p>
+          maken.</p>
         <div class="hero__actions">
           <a class="button button--primary" href="#aanvragen">Vraag een gratis fles aan</a>
-          <a class="button button--ghost" href="#aanvragen">Plan een gesprek</a>
+          <a class="button button--ghost" href="https://wa.me/31612993707" target="_blank" rel="noopener">Stuur ons een appje</a>
         </div>
       </div>
       <div class="hero__media placeholder-media" aria-hidden="true">
@@ -61,8 +64,8 @@
     </div>
   </section>
 
-  <section class="section recognize">
-    <div class="recognize__card">
+  <section class="recognize">
+    <div class="recognize__inner">
       <h2>Herkenbaar?</h2>
       <ul class="recognize__list">
         <li>Je vraagt je af of je meer uit je wijnverkopen kunt halen.</li>
@@ -76,19 +79,42 @@
     <h2 class="section-title">Waarom horeca kiest voor Vinami</h2>
     <div class="reasons__grid">
       <div class="reason">
-        <span class="reason__number">1</span>
+        <span class="reason__icon reason__icon--truck" aria-hidden="true">
+          <svg viewBox="0 0 48 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="1" y="7" width="27" height="16" rx="1.5" stroke="currentColor" stroke-width="2"/>
+            <path d="M28 12h9l6 6v5a1 1 0 0 1-1 1h-3" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            <circle cx="11" cy="25" r="3.5" stroke="currentColor" stroke-width="2"/>
+            <circle cx="35" cy="25" r="3.5" stroke="currentColor" stroke-width="2"/>
+            <path d="M14.5 25h17" stroke="currentColor" stroke-width="2"/>
+            <path d="M1 12h6M1 17h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </span>
         <h3>Altijd op voorraad, binnen 48 uur geleverd</h3>
         <p>Binnen 48 uur aan de deur, geen minimale afname voor vaste afnemers. Zodat jij nooit misgrijpt op
           een drukke avond.</p>
       </div>
       <div class="reason">
-        <span class="reason__number">2</span>
+        <span class="reason__icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="16" cy="16" r="13" stroke="currentColor" stroke-width="2"/>
+            <path d="M12 20 20 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="12.5" cy="12.5" r="1.8" fill="currentColor"/>
+            <circle cx="19.5" cy="19.5" r="1.8" fill="currentColor"/>
+          </svg>
+        </span>
         <h3>Huiswijnen met een eerlijke marge die goed verkopen</h3>
         <p>Wij selecteren huiswijnen op smaak, doorloopsnelheid en goede marges. Groot assortiment huiswijnen
-          met een inkoopprijs onder de € 6,–.</p>
+          met een inkoopprijs onder de € 6.</p>
       </div>
       <div class="reason">
-        <span class="reason__number">3</span>
+        <span class="reason__icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 17v-2a10 10 0 0 1 20 0v2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <rect x="3" y="17" width="6" height="8" rx="2" stroke="currentColor" stroke-width="2"/>
+            <rect x="23" y="17" width="6" height="8" rx="2" stroke="currentColor" stroke-width="2"/>
+            <path d="M9 24v1a5 5 0 0 0 5 5h2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </span>
         <h3>Ondersteuning die écht werkt</h3>
         <p>Van wijnkaart op maat tot scherpe prijzen per glas en begeleiding voor je personeel. We helpen je
           meer te verkopen.</p>
@@ -102,15 +128,15 @@
 
       <article class="case">
         <div class="case__media placeholder-media" aria-hidden="true">
-          <span class="placeholder-media__label">Foto: Floats — wijnkaart op tafel</span>
+          <span class="placeholder-media__label">Foto: Floats, wijnkaart op tafel</span>
         </div>
         <div class="case__content">
-          <h3>Hotel restaurant Floats — Rotterdam</h3>
-          <p class="case__meta">Frans-internationaal · 60 stoelen met terras</p>
+          <h3>Hotel restaurant Floats in Rotterdam</h3>
+          <p class="case__meta">Frans internationaal · 60 stoelen met terras</p>
           <p>Drijvend op de Wijnhaven met een vol terras. Wij ontzorgen volledig: van de kaart en de
             vormgeving tot de levering, een strategie om meer te verkopen en handige geheugensteuntjes voor
             het personeel. Elk seizoen een nieuw kaartje, afgestemd op het menu. Hetzelfde doen we voor hun
-            tweede locatie: Altstadt.</p>
+            tweede locatie Altstadt.</p>
         </div>
       </article>
 
@@ -119,7 +145,7 @@
           <span class="placeholder-media__label">Foto: Kera Cafe</span>
         </div>
         <div class="case__content">
-          <h3>Kera Cafe — Rotterdam</h3>
+          <h3>Kera Cafe in Rotterdam</h3>
           <p class="case__meta">Koffiebar met een creatieve inslag · 50 stoelen</p>
           <p>Een koffiebar is geen wijnbar, maar wat is er leuker dan keramiek beschilderen met een glas wijn?
             Wij stelden een kaart samen die past bij de plek: laagdrempelig, maar met kwaliteit. Wij denken
@@ -132,7 +158,7 @@
           <span class="placeholder-media__label">Foto: Bobbie's Bites</span>
         </div>
         <div class="case__content">
-          <h3>Bobbie's Bites — Hulst</h3>
+          <h3>Bobbie's Bites in Hulst</h3>
           <p class="case__meta">BBQ &amp; grill · 60 stoelen met terras</p>
           <p>Bobbie's staat in Hulst bekend om zijn grote bierkaart. Voor zo'n zaak is het van belang dat ook
             de wijnliefhebbers worden verrast door het aanbod. Een vaste kaart en specials voor feestdagen en
@@ -146,67 +172,32 @@
   <section class="section signup" id="aanvragen">
     <div class="signup__inner">
       <div class="signup__intro">
-        <h2>Benieuwd wat we voor jouw zaak kunnen betekenen?</h2>
-        <p>Wij denken graag vrijblijvend met je mee, bijvoorbeeld met een selectie wijnen die aansluit op
-          jullie keuken én een concreet plan voor extra wijnverkopen. Vraag hieronder een gratis fles aan of
-          plan meteen een kennismaking — we nemen binnen twee werkdagen contact op om samen een proefafspraak
-          in te plannen.</p>
+        <h2>Vraag een gratis fles aan</h2>
+        <p>Laat je naam, restaurant en telefoonnummer achter, dan nemen we contact op om de aflevering van
+          de fles in te plannen. Geen verplichtingen.</p>
         <p class="signup__direct">Liever meteen bellen of appen? <a href="tel:+31612993707">+31 (0)6 1299
-          3707</a> of mail naar <a href="mailto:info@vinami.nl">info@vinami.nl</a>.</p>
+          3707</a>.</p>
       </div>
 
       <form class="signup__form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-        <input type="hidden" name="_subject" value="Nieuwe aanvraag via vinami.nl/horeca">
-
-        <fieldset class="field-group">
-          <legend>Wat wil je?</legend>
-          <label class="radio">
-            <input type="radio" name="verzoek" value="Gratis fles aanvragen" checked>
-            Een gratis fles aanvragen
-          </label>
-          <label class="radio">
-            <input type="radio" name="verzoek" value="Vrijblijvend kennismaken">
-            Vrijblijvend kennismaken
-          </label>
-          <label class="radio">
-            <input type="radio" name="verzoek" value="Beide">
-            Beide
-          </label>
-        </fieldset>
-
-        <div class="field-row">
-          <label class="field">
-            <span>Naam</span>
-            <input type="text" name="naam" required autocomplete="name">
-          </label>
-          <label class="field">
-            <span>Restaurant / zaak</span>
-            <input type="text" name="restaurant" required autocomplete="organization">
-          </label>
-        </div>
-
-        <div class="field-row">
-          <label class="field">
-            <span>E-mailadres</span>
-            <input type="email" name="_replyto" required autocomplete="email">
-          </label>
-          <label class="field">
-            <span>Telefoonnummer</span>
-            <input type="tel" name="telefoon" autocomplete="tel">
-          </label>
-        </div>
+        <input type="hidden" name="_subject" value="Nieuwe aanvraag gratis fles via vinami.nl/horeca">
 
         <label class="field">
-          <span>Adres (voor verzending van de gratis fles, indien van toepassing)</span>
-          <input type="text" name="adres" autocomplete="street-address">
+          <span>Naam</span>
+          <input type="text" name="naam" required autocomplete="name">
         </label>
 
         <label class="field">
-          <span>Vertel ons kort over je wijnkaart of wensen (optioneel)</span>
-          <textarea name="bericht" rows="4"></textarea>
+          <span>Restaurant</span>
+          <input type="text" name="restaurant" required autocomplete="organization">
         </label>
 
-        <button class="button button--primary" type="submit">Versturen</button>
+        <label class="field">
+          <span>Telefoonnummer</span>
+          <input type="tel" name="telefoon" required autocomplete="tel">
+        </label>
+
+        <button class="button button--primary" type="submit">Vraag je gratis fles aan</button>
         <p class="signup__disclaimer">We gebruiken je gegevens alleen om contact met je op te nemen over
           Vinami. Geen spam.</p>
       </form>
@@ -218,10 +209,17 @@
 <footer class="footer">
   <div class="footer__inner">
     <span class="logo logo--footer">Vinami</span>
-    <p>Bel of stuur ons een WhatsApp-bericht via <a href="tel:+31612993707">+31 (0)6 1299 3707</a> of mail
+    <p>Bel of stuur ons een appje via <a href="tel:+31612993707">+31 (0)6 1299 3707</a> of mail
       naar <a href="mailto:info@vinami.nl">info@vinami.nl</a></p>
   </div>
 </footer>
+
+<a class="whatsapp-fab" href="https://wa.me/31612993707" target="_blank" rel="noopener" aria-label="Stuur ons een WhatsApp bericht">
+  <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M16 4C9.4 4 4 9.4 4 16c0 2.2.6 4.3 1.7 6.1L4 28l6.1-1.6A11.9 11.9 0 0 0 16 28c6.6 0 12-5.4 12-12S22.6 4 16 4Z" stroke="white" stroke-width="2"/>
+    <path d="M11 15.2c1.4 3 3.8 5.3 6.8 6.6.9.4 1.7.3 2.4-.1.5-.3.9-.8 1-1.3.1-.3 0-.6-.3-.8l-2-1.4c-.3-.2-.6-.2-.9 0l-.7.6c-.2.2-.5.2-.8 0-1-.6-1.9-1.5-2.5-2.5-.2-.3-.2-.6 0-.8l.6-.7c.2-.3.2-.6 0-.9l-1.4-2c-.2-.3-.5-.4-.8-.3-.6.1-1 .5-1.3 1-.4.7-.5 1.5-.1 2.4Z" fill="white"/>
+  </svg>
+</a>
 
 <script src="assets/script.js"></script>
 </body>

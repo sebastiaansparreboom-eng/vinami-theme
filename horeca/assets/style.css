@@ -5,6 +5,7 @@
 :root {
   --vinami-terracotta: #a6402a;
   --vinami-terracotta-dark: #7f2f1f;
+  --vinami-wine: #5c1122;
   --vinami-cream: #fbf1ec;
   --vinami-cream-soft: #fdf8f5;
   --vinami-text: #1c1a18;
@@ -95,12 +96,21 @@ a {
   align-items: center;
   justify-content: space-between;
 }
+.logo-link {
+  text-decoration: none;
+  line-height: 0;
+}
 .logo {
   font-family: var(--font-serif);
   font-style: italic;
   font-size: 1.75rem;
   color: var(--vinami-cream);
   text-decoration: none;
+}
+.logo-img {
+  height: 40px;
+  width: auto;
+  display: block;
 }
 .topbar__contact {
   color: var(--vinami-cream);
@@ -222,13 +232,21 @@ a {
   margin: 32px 0 0;
 }
 
-/* Recognize card */
+/* Recognize: full-bleed wine-toned band to break up the page */
 
-.recognize__card {
-  background: var(--vinami-white);
-  border: 1px solid var(--vinami-border);
-  border-radius: var(--radius);
-  padding: 48px;
+.recognize {
+  background-color: var(--vinami-wine);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Cpath d='M-10 90 Q35 40 70 90 T150 90' stroke='%23f2ede4' stroke-width='1.5' fill='none' opacity='0.14'/%3E%3Ccircle cx='40' cy='60' r='3.5' fill='%23f2ede4' opacity='0.14'/%3E%3Ccircle cx='100' cy='115' r='3.5' fill='%23f2ede4' opacity='0.14'/%3E%3Ccircle cx='115' cy='70' r='2.5' fill='%23f2ede4' opacity='0.14'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  color: var(--vinami-cream);
+  padding: 80px 24px;
+}
+.recognize__inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+.recognize h2 {
+  color: var(--vinami-cream);
 }
 .recognize__list {
   list-style: none;
@@ -241,6 +259,7 @@ a {
   position: relative;
   padding-left: 28px;
   font-size: 1.05rem;
+  color: #f2ded6;
 }
 .recognize__list li::before {
   content: "";
@@ -250,7 +269,7 @@ a {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: var(--vinami-terracotta);
+  background: var(--vinami-cream);
 }
 
 /* Reasons */
@@ -260,21 +279,44 @@ a {
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
 }
-.reason__number {
+.reason__icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: var(--vinami-text);
-  color: var(--vinami-cream);
-  font-family: var(--font-heading);
-  font-weight: 700;
+  width: 48px;
+  height: 48px;
+  color: var(--vinami-terracotta);
   margin-bottom: 16px;
+}
+.reason__icon svg {
+  width: 100%;
+  height: 100%;
 }
 .reason p {
   color: var(--vinami-text-muted);
+}
+
+/* Small on-load animation for the delivery-truck icon. A plain CSS
+   keyframe (no scroll/JS dependency) so it always plays once and never
+   leaves content invisible. */
+
+@keyframes drive-in {
+  from {
+    opacity: 0;
+    transform: translateX(-18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.reason__icon--truck {
+  animation: drive-in 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) 0.15s both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .reason__icon--truck {
+    animation: none;
+  }
 }
 
 /* Case studies */
@@ -321,33 +363,6 @@ a {
   display: grid;
   gap: 20px;
 }
-.field-group {
-  border: 1px solid var(--vinami-border);
-  border-radius: var(--radius-sm);
-  padding: 16px 20px;
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  align-items: center;
-}
-.field-group legend {
-  font-family: var(--font-heading);
-  font-weight: 600;
-  font-size: 0.85rem;
-  padding: 0 6px;
-}
-.radio {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 0.9rem;
-}
-.field-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
 .field {
   display: grid;
   gap: 6px;
@@ -355,8 +370,7 @@ a {
   font-weight: 600;
   font-size: 0.85rem;
 }
-.field input,
-.field textarea {
+.field input {
   font-family: var(--font-body);
   font-weight: 400;
   font-size: 1rem;
@@ -366,8 +380,7 @@ a {
   background: var(--vinami-cream-soft);
   color: var(--vinami-text);
 }
-.field input:focus,
-.field textarea:focus {
+.field input:focus {
   outline: 2px solid var(--vinami-terracotta);
   outline-offset: 1px;
 }
@@ -420,6 +433,31 @@ a {
   margin: 0;
 }
 
+/* Sticky WhatsApp button */
+
+.whatsapp-fab {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #25d366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(28, 26, 24, 0.25);
+  z-index: 50;
+  transition: transform 0.15s ease;
+}
+.whatsapp-fab:hover {
+  transform: scale(1.06);
+}
+.whatsapp-fab svg {
+  width: 30px;
+  height: 30px;
+}
+
 /* Responsive */
 
 @media (max-width: 860px) {
@@ -436,13 +474,16 @@ a {
   .reasons__grid {
     grid-template-columns: 1fr;
   }
-  .field-row {
-    grid-template-columns: 1fr;
-  }
   .section {
     padding: 64px 20px;
   }
-  .recognize__card {
-    padding: 32px 24px;
+  .recognize {
+    padding: 56px 20px;
+  }
+  .whatsapp-fab {
+    right: 16px;
+    bottom: 16px;
+    width: 50px;
+    height: 50px;
   }
 }

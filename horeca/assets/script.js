@@ -29,8 +29,8 @@
 
     function showConfirmation() {
       form.innerHTML =
-        '<p class="signup__confirmation">Bedankt! We hebben je aanvraag ontvangen en nemen binnen twee ' +
-        "werkdagen contact met je op om een proefafspraak in te plannen.</p>";
+        '<p class="signup__confirmation">Bedankt! We nemen binnen twee werkdagen contact met je op om de ' +
+        "aflevering van je gratis fles in te plannen.</p>";
     }
 
     function showError() {
