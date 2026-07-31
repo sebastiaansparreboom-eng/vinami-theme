@@ -77,8 +77,8 @@
         "section_height_custom": 50,
         "color_scheme": "scheme-6",
         "toggle_overlay": true,
-        "overlay_color": "#00000014",
-        "overlay_style": "gradient",
+        "overlay_color": "#14120fff",
+        "overlay_style": "solid",
         "gradient_direction": "to bottom",
         "blurred_reflection": false,
         "reflection_opacity": 75,
@@ -674,297 +674,250 @@
       }
     },
     "media_filosofie": {
-      "type": "media-with-content",
-      "name": "t:names.media_with_text",
+      "type": "section",
+      "name": "t:names.section",
       "blocks": {
-        "media": {
-          "type": "_media-without-appearance",
-          "static": true,
-          "settings": {},
+        "caption": {
+          "type": "text",
+          "name": "t:names.text",
+          "settings": {
+            "text": "<p>Onze filosofie</p>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "h6",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
           "blocks": {}
         },
-        "content": {
-          "type": "_content-without-appearance",
-          "static": true,
+        "heading": {
+          "type": "text",
+          "name": "t:names.text",
           "settings": {
-            "horizontal_alignment_flex_direction_column": "flex-start",
-            "vertical_alignment_flex_direction_column": "space-between"
+            "text": "<h2>Rust in het glas, precisie in het vak</h2>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "h2",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
           },
-          "blocks": {
-            "caption": {
-              "type": "text",
-              "name": "t:names.text",
-              "settings": {
-                "text": "<p>Onze filosofie</p>",
-                "width": "fit-content",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "h6",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "var(--color-foreground)",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "group": {
-              "type": "group",
-              "name": "t:names.group",
-              "settings": {
-                "height": "fit"
-              },
-              "blocks": {
-                "heading": {
-                  "type": "text",
-                  "name": "t:names.text",
-                  "settings": {
-                    "text": "<h2>Rust in het glas, precisie in het vak</h2>",
-                    "width": "fit-content",
-                    "max_width": "normal",
-                    "alignment": "left",
-                    "type_preset": "h3",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "color": "var(--color-foreground)",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                },
-                "text": {
-                  "type": "text",
-                  "name": "t:names.text",
-                  "settings": {
-                    "text": "<p>Vinami kiest wijnen zoals we ontwerpen: met aandacht voor herkomst, vakmanschap en een lange adem. Geen overbodige versiering, wel karakter — van het wijngoed tot in uw glas.</p>",
-                    "width": "fit-content",
-                    "max_width": "narrow",
-                    "alignment": "left",
-                    "type_preset": "rte",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "color": "var(--color-foreground)",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "heading",
-                "text"
-              ]
-            },
-            "button": {
-              "type": "button",
-              "name": "t:names.button",
-              "settings": {
-                "label": "Ontdek de collectie",
-                "link": "shopify://collections/all",
-                "open_in_new_tab": false,
-                "style_class": "link",
-                "width": "fit-content",
-                "custom_width": 100,
-                "width_mobile": "fit-content",
-                "custom_width_mobile": 100
-              },
-              "blocks": {}
-            }
+          "blocks": {}
+        },
+        "text": {
+          "type": "text",
+          "name": "t:names.text",
+          "settings": {
+            "text": "<p>Vinami kiest wijnen zoals we ontwerpen: met aandacht voor herkomst, vakmanschap en een lange adem. Geen overbodige versiering, wel karakter — van het wijngoed tot in uw glas.</p>",
+            "width": "100%",
+            "max_width": "narrow",
+            "alignment": "center",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
           },
-          "block_order": [
-            "caption",
-            "group",
-            "button"
-          ]
+          "blocks": {}
+        },
+        "button": {
+          "type": "button",
+          "name": "t:names.button",
+          "settings": {
+            "label": "Ontdek de collectie",
+            "link": "shopify://collections/all",
+            "open_in_new_tab": false,
+            "style_class": "link",
+            "width": "fit-content",
+            "custom_width": 100,
+            "width_mobile": "fit-content",
+            "custom_width_mobile": 100
+          },
+          "blocks": {}
         }
       },
       "block_order": [
-        "media",
-        "content"
+        "caption",
+        "heading",
+        "text",
+        "button"
       ],
       "settings": {
-        "media_position": "left",
-        "media_width": "medium",
-        "media_height": "60svh",
-        "section_width": "full-width",
-        "extend_media": true,
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "center",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 20,
+        "section_width": "page-width",
+        "section_height": "",
         "color_scheme": "scheme-3",
-        "padding-block-start": 0,
-        "padding-block-end": 0
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "padding-block-start": 96,
+        "padding-block-end": 96,
+        "padding_block_start": 96
       }
     },
     "media_horeca": {
-      "type": "media-with-content",
-      "name": "t:names.media_with_text",
+      "type": "section",
+      "name": "t:names.section",
       "blocks": {
-        "media": {
-          "type": "_media-without-appearance",
-          "static": true,
-          "settings": {},
+        "caption": {
+          "type": "text",
+          "name": "t:names.text",
+          "settings": {
+            "text": "<p>Voor horeca &amp; wijnhandel</p>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "h6",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
           "blocks": {}
         },
-        "content": {
-          "type": "_content-without-appearance",
-          "static": true,
+        "heading": {
+          "type": "text",
+          "name": "t:names.text",
           "settings": {
-            "horizontal_alignment_flex_direction_column": "flex-start",
-            "vertical_alignment_flex_direction_column": "space-between"
+            "text": "<h2>Wijn op maat voor uw zaak</h2>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "h2",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
           },
-          "blocks": {
-            "caption": {
-              "type": "text",
-              "name": "t:names.text",
-              "settings": {
-                "text": "<p>Voor horeca &amp; wijnhandel</p>",
-                "width": "fit-content",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "h6",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "var(--color-foreground)",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "group": {
-              "type": "group",
-              "name": "t:names.group",
-              "settings": {
-                "height": "fit"
-              },
-              "blocks": {
-                "heading": {
-                  "type": "text",
-                  "name": "t:names.text",
-                  "settings": {
-                    "text": "<h2>Wijn op maat voor uw zaak</h2>",
-                    "width": "fit-content",
-                    "max_width": "normal",
-                    "alignment": "left",
-                    "type_preset": "h3",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "color": "var(--color-foreground)",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                },
-                "text": {
-                  "type": "text",
-                  "name": "t:names.text",
-                  "settings": {
-                    "text": "<p>Restaurant, wijnbar of speciaalzaak? Wij stellen samen met u een wijnkaart samen, met zakelijke voorwaarden en persoonlijk advies.</p>",
-                    "width": "fit-content",
-                    "max_width": "narrow",
-                    "alignment": "left",
-                    "type_preset": "rte",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "color": "var(--color-foreground)",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "heading",
-                "text"
-              ]
-            },
-            "button": {
-              "type": "button",
-              "name": "t:names.button",
-              "settings": {
-                "label": "Vraag een offerte aan",
-                "link": "shopify://pages/horeca",
-                "open_in_new_tab": false,
-                "style_class": "button",
-                "width": "fit-content",
-                "custom_width": 100,
-                "width_mobile": "fit-content",
-                "custom_width_mobile": 100
-              },
-              "blocks": {}
-            }
+          "blocks": {}
+        },
+        "text": {
+          "type": "text",
+          "name": "t:names.text",
+          "settings": {
+            "text": "<p>Restaurant, wijnbar of speciaalzaak? Wij stellen samen met u een wijnkaart samen, met zakelijke voorwaarden en persoonlijk advies.</p>",
+            "width": "100%",
+            "max_width": "narrow",
+            "alignment": "center",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
           },
-          "block_order": [
-            "caption",
-            "group",
-            "button"
-          ]
+          "blocks": {}
+        },
+        "button": {
+          "type": "button",
+          "name": "t:names.button",
+          "settings": {
+            "label": "Vraag een offerte aan",
+            "link": "shopify://pages/horeca",
+            "open_in_new_tab": false,
+            "style_class": "button",
+            "width": "fit-content",
+            "custom_width": 100,
+            "width_mobile": "fit-content",
+            "custom_width_mobile": 100
+          },
+          "blocks": {}
         }
       },
       "block_order": [
-        "media",
-        "content"
+        "caption",
+        "heading",
+        "text",
+        "button"
       ],
       "settings": {
-        "media_position": "right",
-        "media_width": "medium",
-        "media_height": "60svh",
-        "section_width": "full-width",
-        "extend_media": true,
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "center",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 20,
+        "section_width": "page-width",
+        "section_height": "",
         "color_scheme": "scheme-5",
-        "padding-block-start": 0,
-        "padding-block-end": 0
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "padding-block-start": 96,
+        "padding-block-end": 96
       }
     },
     "categorie_grid": {
@@ -1004,13 +957,13 @@
             "link": "",
             "open_in_new_tab": false,
             "content_direction": "row",
-            "vertical_on_mobile": false,
+            "vertical_on_mobile": true,
             "horizontal_alignment": "space-between",
             "vertical_alignment": "center",
             "align_baseline": false,
             "horizontal_alignment_flex_direction_column": "center",
             "vertical_alignment_flex_direction_column": "center",
-            "gap": 24,
+            "gap": 4,
             "width": "fill",
             "custom_width": 100,
             "width_mobile": "fill",
@@ -1049,15 +1002,15 @@
                 "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "center",
                 "vertical_alignment_flex_direction_column": "center",
-                "gap": 16,
+                "gap": 12,
                 "width": "fill",
                 "custom_width": 100,
                 "width_mobile": "fill",
                 "custom_width_mobile": 100,
                 "height": "fit",
                 "custom_height": 100,
-                "inherit_color_scheme": true,
-                "color_scheme": "",
+                "inherit_color_scheme": false,
+                "color_scheme": "scheme-vinami-rood",
                 "background_media": "none",
                 "video_position": "cover",
                 "background_image_position": "cover",
@@ -1069,26 +1022,13 @@
                 "overlay_color": "#00000026",
                 "overlay_style": "solid",
                 "gradient_direction": "to top",
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
+                "padding-block-start": 72,
+                "padding-block-end": 72,
+                "padding-inline-start": 16,
+                "padding-inline-end": 16,
+                "padding_block_start": 72
               },
               "blocks": {
-                "image": {
-                  "type": "image",
-                  "name": "t:names.image",
-                  "settings": {
-                    "image": null,
-                    "link": "",
-                    "image_ratio": "square",
-                    "width": "fill",
-                    "custom_width": 100,
-                    "width_mobile": "fill",
-                    "custom_width_mobile": 100
-                  },
-                  "blocks": {}
-                },
                 "label": {
                   "type": "text",
                   "name": "t:names.text",
@@ -1097,13 +1037,13 @@
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
-                    "type_preset": "h6",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "line_height": "normal",
+                    "type_preset": "custom",
+                    "font": "var(--font-heading--family)",
+                    "font_size": "1.25rem",
+                    "line_height": "tight",
                     "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
+                    "case": "uppercase",
+                    "wrap": "nowrap",
                     "color": "var(--color-foreground)",
                     "background": false,
                     "background_color": "#00000026",
@@ -1117,7 +1057,6 @@
                 }
               },
               "block_order": [
-                "image",
                 "label"
               ]
             },
@@ -1134,15 +1073,15 @@
                 "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "center",
                 "vertical_alignment_flex_direction_column": "center",
-                "gap": 16,
+                "gap": 12,
                 "width": "fill",
                 "custom_width": 100,
                 "width_mobile": "fill",
                 "custom_width_mobile": 100,
                 "height": "fit",
                 "custom_height": 100,
-                "inherit_color_scheme": true,
-                "color_scheme": "",
+                "inherit_color_scheme": false,
+                "color_scheme": "scheme-vinami-wit",
                 "background_media": "none",
                 "video_position": "cover",
                 "background_image_position": "cover",
@@ -1154,26 +1093,13 @@
                 "overlay_color": "#00000026",
                 "overlay_style": "solid",
                 "gradient_direction": "to top",
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
+                "padding-block-start": 72,
+                "padding-block-end": 72,
+                "padding-inline-start": 16,
+                "padding-inline-end": 16,
+                "padding_block_start": 72
               },
               "blocks": {
-                "image": {
-                  "type": "image",
-                  "name": "t:names.image",
-                  "settings": {
-                    "image": null,
-                    "link": "",
-                    "image_ratio": "square",
-                    "width": "fill",
-                    "custom_width": 100,
-                    "width_mobile": "fill",
-                    "custom_width_mobile": 100
-                  },
-                  "blocks": {}
-                },
                 "label": {
                   "type": "text",
                   "name": "t:names.text",
@@ -1182,13 +1108,13 @@
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
-                    "type_preset": "h6",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "line_height": "normal",
+                    "type_preset": "custom",
+                    "font": "var(--font-heading--family)",
+                    "font_size": "1.25rem",
+                    "line_height": "tight",
                     "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
+                    "case": "uppercase",
+                    "wrap": "nowrap",
                     "color": "var(--color-foreground)",
                     "background": false,
                     "background_color": "#00000026",
@@ -1202,7 +1128,6 @@
                 }
               },
               "block_order": [
-                "image",
                 "label"
               ]
             },
@@ -1219,15 +1144,15 @@
                 "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "center",
                 "vertical_alignment_flex_direction_column": "center",
-                "gap": 16,
+                "gap": 12,
                 "width": "fill",
                 "custom_width": 100,
                 "width_mobile": "fill",
                 "custom_width_mobile": 100,
                 "height": "fit",
                 "custom_height": 100,
-                "inherit_color_scheme": true,
-                "color_scheme": "",
+                "inherit_color_scheme": false,
+                "color_scheme": "scheme-vinami-rose",
                 "background_media": "none",
                 "video_position": "cover",
                 "background_image_position": "cover",
@@ -1239,26 +1164,13 @@
                 "overlay_color": "#00000026",
                 "overlay_style": "solid",
                 "gradient_direction": "to top",
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
+                "padding-block-start": 72,
+                "padding-block-end": 72,
+                "padding-inline-start": 16,
+                "padding-inline-end": 16,
+                "padding_block_start": 72
               },
               "blocks": {
-                "image": {
-                  "type": "image",
-                  "name": "t:names.image",
-                  "settings": {
-                    "image": null,
-                    "link": "",
-                    "image_ratio": "square",
-                    "width": "fill",
-                    "custom_width": 100,
-                    "width_mobile": "fill",
-                    "custom_width_mobile": 100
-                  },
-                  "blocks": {}
-                },
                 "label": {
                   "type": "text",
                   "name": "t:names.text",
@@ -1267,13 +1179,13 @@
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
-                    "type_preset": "h6",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "line_height": "normal",
+                    "type_preset": "custom",
+                    "font": "var(--font-heading--family)",
+                    "font_size": "1.25rem",
+                    "line_height": "tight",
                     "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
+                    "case": "uppercase",
+                    "wrap": "nowrap",
                     "color": "var(--color-foreground)",
                     "background": false,
                     "background_color": "#00000026",
@@ -1287,7 +1199,6 @@
                 }
               },
               "block_order": [
-                "image",
                 "label"
               ]
             },
@@ -1304,15 +1215,15 @@
                 "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "center",
                 "vertical_alignment_flex_direction_column": "center",
-                "gap": 16,
+                "gap": 12,
                 "width": "fill",
                 "custom_width": 100,
                 "width_mobile": "fill",
                 "custom_width_mobile": 100,
                 "height": "fit",
                 "custom_height": 100,
-                "inherit_color_scheme": true,
-                "color_scheme": "",
+                "inherit_color_scheme": false,
+                "color_scheme": "scheme-vinami-mousserend",
                 "background_media": "none",
                 "video_position": "cover",
                 "background_image_position": "cover",
@@ -1324,26 +1235,13 @@
                 "overlay_color": "#00000026",
                 "overlay_style": "solid",
                 "gradient_direction": "to top",
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
+                "padding-block-start": 72,
+                "padding-block-end": 72,
+                "padding-inline-start": 16,
+                "padding-inline-end": 16,
+                "padding_block_start": 72
               },
               "blocks": {
-                "image": {
-                  "type": "image",
-                  "name": "t:names.image",
-                  "settings": {
-                    "image": null,
-                    "link": "",
-                    "image_ratio": "square",
-                    "width": "fill",
-                    "custom_width": 100,
-                    "width_mobile": "fill",
-                    "custom_width_mobile": 100
-                  },
-                  "blocks": {}
-                },
                 "label": {
                   "type": "text",
                   "name": "t:names.text",
@@ -1352,13 +1250,13 @@
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
-                    "type_preset": "h6",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "line_height": "normal",
+                    "type_preset": "custom",
+                    "font": "var(--font-heading--family)",
+                    "font_size": "1.25rem",
+                    "line_height": "tight",
                     "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
+                    "case": "uppercase",
+                    "wrap": "nowrap",
                     "color": "var(--color-foreground)",
                     "background": false,
                     "background_color": "#00000026",
@@ -1372,7 +1270,6 @@
                 }
               },
               "block_order": [
-                "image",
                 "label"
               ]
             },
@@ -1389,15 +1286,15 @@
                 "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "center",
                 "vertical_alignment_flex_direction_column": "center",
-                "gap": 16,
+                "gap": 12,
                 "width": "fill",
                 "custom_width": 100,
                 "width_mobile": "fill",
                 "custom_width_mobile": 100,
                 "height": "fit",
                 "custom_height": 100,
-                "inherit_color_scheme": true,
-                "color_scheme": "",
+                "inherit_color_scheme": false,
+                "color_scheme": "scheme-vinami-versterkt",
                 "background_media": "none",
                 "video_position": "cover",
                 "background_image_position": "cover",
@@ -1409,26 +1306,13 @@
                 "overlay_color": "#00000026",
                 "overlay_style": "solid",
                 "gradient_direction": "to top",
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
+                "padding-block-start": 72,
+                "padding-block-end": 72,
+                "padding-inline-start": 16,
+                "padding-inline-end": 16,
+                "padding_block_start": 72
               },
               "blocks": {
-                "image": {
-                  "type": "image",
-                  "name": "t:names.image",
-                  "settings": {
-                    "image": null,
-                    "link": "",
-                    "image_ratio": "square",
-                    "width": "fill",
-                    "custom_width": 100,
-                    "width_mobile": "fill",
-                    "custom_width_mobile": 100
-                  },
-                  "blocks": {}
-                },
                 "label": {
                   "type": "text",
                   "name": "t:names.text",
@@ -1437,13 +1321,13 @@
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
-                    "type_preset": "h6",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "line_height": "normal",
+                    "type_preset": "custom",
+                    "font": "var(--font-heading--family)",
+                    "font_size": "1.25rem",
+                    "line_height": "tight",
                     "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
+                    "case": "uppercase",
+                    "wrap": "nowrap",
                     "color": "var(--color-foreground)",
                     "background": false,
                     "background_color": "#00000026",
@@ -1457,7 +1341,6 @@
                 }
               },
               "block_order": [
-                "image",
                 "label"
               ]
             }
