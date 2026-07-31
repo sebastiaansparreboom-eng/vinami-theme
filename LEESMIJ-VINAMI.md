@@ -12,7 +12,12 @@ De homepage (`templates/index.json`) heeft naast de hero en het productoverzicht
 
 Het categorie-grid linkt naar vijf collecties met de handles `rood`, `wit`, `rose`, `mousserend` en `versterkt`. Maak deze collecties aan onder Onlinewinkel > Collecties met precies deze handles (of pas de links in het grid-blok aan naar de handles die je al gebruikt), anders krijgen bezoekers een niet-gevonden pagina bij een klik.
 
-Zolang er geen echte productfoto's/lifestylebeelden zijn, tonen de hero, het categorie-grid, het filosofieblok en het horecablok bewust géén afbeeldingen (dit voorkomt dat Shopify's generieke placeholder-illustratie zichtbaar wordt) — ze leunen nu op kleurvlakken en typografie. Zodra er fotografie is: voeg in de thema-editor een afbeelding toe aan de hero-sectie, en overweeg het filosofie- en horecablok terug te zetten naar het `media-with-content` sectietype voor een beeld-naast-tekst layout.
+Zolang er geen echte productfoto's/lifestylebeelden zijn, tonen de hero, het categorie-grid, het filosofieblok en het horecablok bewust géén afbeeldingen (dit voorkomt dat Shopify's generieke placeholder-illustratie zichtbaar wordt) — ze leunen nu op kleurvlakken en typografie. Zodra er fotografie is:
+
+- **Hero**: voeg in de thema-editor een afbeelding toe bij de hero-sectie, en verlaag daarna de overlay-dekking (of zet "Overlay" uit) — die staat nu bewust op 100% zwart om de placeholder te verbergen, en zou anders een nieuwe foto alsnog volledig aan het zicht onttrekken.
+- **Filosofie- en horecablok**: overweeg deze terug te zetten naar het `media-with-content` sectietype voor een beeld-naast-tekst layout.
+
+De homepage is verder groter en langer gemaakt: een grotere hero, bredere kleurvlak-tegels met korte omschrijving per wijntype, een statistiekenregel en langere tekst in het filosofieblok, een citaatsectie, een groter productoverzicht (12 in plaats van 8 producten) en ruimere witruimte door de hele pagina.
 
 Placeholder-teksten (verzending, retour, aanbevelingen op de productpagina, en de nieuwsbrief-aanmelding in de footer) zijn vertaald naar het Nederlands en aangepast aan wijn. De footer gebruikt nu het donkere kleurenschema.
 
