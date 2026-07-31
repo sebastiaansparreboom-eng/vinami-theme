@@ -12,6 +12,8 @@ De homepage (`templates/index.json`) heeft naast de hero en het productoverzicht
 
 Het categorie-grid linkt naar vijf collecties met de handles `rood`, `wit`, `rose`, `mousserend` en `versterkt`. Maak deze collecties aan onder Onlinewinkel > Collecties met precies deze handles (of pas de links in het grid-blok aan naar de handles die je al gebruikt), anders krijgen bezoekers een niet-gevonden pagina bij een klik.
 
+Zolang er geen echte productfoto's/lifestylebeelden zijn, tonen de hero, het categorie-grid, het filosofieblok en het horecablok bewust géén afbeeldingen (dit voorkomt dat Shopify's generieke placeholder-illustratie zichtbaar wordt) — ze leunen nu op kleurvlakken en typografie. Zodra er fotografie is: voeg in de thema-editor een afbeelding toe aan de hero-sectie, en overweeg het filosofie- en horecablok terug te zetten naar het `media-with-content` sectietype voor een beeld-naast-tekst layout.
+
 Placeholder-teksten (verzending, retour, aanbevelingen op de productpagina, en de nieuwsbrief-aanmelding in de footer) zijn vertaald naar het Nederlands en aangepast aan wijn. De footer gebruikt nu het donkere kleurenschema.
 
 `sections/age-verification.liquid` is de leeftijdscheck. Deze staat al ingehaakt in `layout/theme.liquid`, direct na de openende `<body>` tag, en verschijnt dus op elke pagina totdat een bezoeker zijn geboortedatum bevestigt.
