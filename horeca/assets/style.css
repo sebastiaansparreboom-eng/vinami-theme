@@ -102,23 +102,13 @@ a {
   align-items: center;
   gap: 10px;
 }
-.logo-glass {
-  width: 22px;
-  height: 30px;
-  color: var(--vinami-cream);
-  flex-shrink: 0;
-}
-.logo {
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-size: 1.75rem;
-  color: var(--vinami-cream);
-  text-decoration: none;
-}
 .logo-img {
-  height: 40px;
+  height: 52px;
   width: auto;
   display: block;
+  background: var(--vinami-cream);
+  border-radius: var(--radius-sm);
+  padding: 6px 12px;
 }
 .topbar__contact {
   color: var(--vinami-cream);
@@ -164,6 +154,24 @@ a {
   font-size: 0.75rem;
   font-family: var(--font-heading);
   letter-spacing: 0.03em;
+}
+
+/* Real photography: same aspect-ratio boxes as the placeholders, cropped
+   to fill and rounded to match. */
+
+.hero__media,
+.story__media,
+.case__media {
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.hero__media img,
+.story__media img,
+.case__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* Buttons */
@@ -436,8 +444,9 @@ a {
   gap: 16px 32px;
   justify-content: space-between;
 }
-.logo--footer {
-  font-size: 1.4rem;
+.logo-img--footer {
+  height: 42px;
+  padding: 5px 10px;
 }
 .footer a {
   color: var(--vinami-cream);
