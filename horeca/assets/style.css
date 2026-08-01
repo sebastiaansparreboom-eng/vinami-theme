@@ -354,8 +354,8 @@ a {
   align-items: center;
 }
 .case__media {
-  aspect-ratio: 4 / 3;
-  min-height: 200px;
+  aspect-ratio: 3 / 4;
+  min-height: 280px;
 }
 .case__meta {
   font-family: var(--font-serif);
