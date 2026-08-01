@@ -98,7 +98,15 @@ a {
 }
 .logo-link {
   text-decoration: none;
-  line-height: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo-glass {
+  width: 22px;
+  height: 30px;
+  color: var(--vinami-cream);
+  flex-shrink: 0;
 }
 .logo {
   font-family: var(--font-serif);
