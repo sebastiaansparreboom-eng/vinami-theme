@@ -106,10 +106,9 @@ a {
   height: 52px;
   width: auto;
   display: block;
-  filter:
-    drop-shadow(0 0 3px var(--vinami-cream))
-    drop-shadow(0 0 3px var(--vinami-cream))
-    drop-shadow(0 0 6px rgba(251, 241, 236, 0.6));
+  background: var(--vinami-cream);
+  border-radius: var(--radius-sm);
+  padding: 6px 12px;
 }
 .topbar__contact {
   color: var(--vinami-cream);
@@ -162,12 +161,16 @@ a {
 
 .hero__media,
 .story__media {
-  height: 420px;
+  aspect-ratio: 4 / 5;
+  height: min(440px, 55vh);
+  justify-self: center;
   border-radius: var(--radius);
   overflow: hidden;
 }
 .case__media {
-  height: 300px;
+  aspect-ratio: 3 / 4;
+  height: min(380px, 48vh);
+  justify-self: center;
   border-radius: var(--radius);
   overflow: hidden;
 }
@@ -442,6 +445,7 @@ a {
 }
 .logo-img--footer {
   height: 42px;
+  padding: 5px 10px;
 }
 .footer a {
   color: var(--vinami-cream);
@@ -488,10 +492,14 @@ a {
   .story__media,
   .hero__media {
     order: -1;
-    height: 280px;
+    justify-self: stretch;
+    width: 100%;
+    height: 320px;
   }
   .case__media {
-    height: 240px;
+    justify-self: stretch;
+    width: 100%;
+    height: 280px;
   }
   .reasons__grid {
     grid-template-columns: 1fr;
