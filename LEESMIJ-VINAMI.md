@@ -27,6 +27,8 @@ Placeholder-teksten (verzending, retour, aanbevelingen op de productpagina, en d
 
 `sections/horeca-request-form.liquid` en `templates/page.horeca.json` vormen samen de horecapagina met aanvraagformulier.
 
+`sections/sticky-whatsapp.liquid` is een zwevende WhatsApp-knop rechtsonder in beeld, op elke pagina van de webshop (zelfde idee als de knop op de horecapagina). Ingehaakt in `layout/theme.liquid`, vlak voor de sluitende `</body>`-tag. Telefoonnummer, voorgevuld bericht, labeltekst, positie (links/rechts) en zichtbaarheid op mobiel/desktop zijn allemaal aan te passen via Thema-editor > deze sectie; er is geen extra admin-werk nodig, het nummer staat standaard al goed (+31612993707).
+
 ## Wat jij nog moet doen in Shopify admin
 
 Ga naar Instellingen > Aangepaste gegevens > Producten en maak deze metafields aan in de namespace `vinami`: regio (enkele regel tekst), druif (enkele regel tekst), jaargang (enkele regel tekst of geheel getal), alcoholpercentage (getal met decimalen), serveertemperatuur (enkele regel tekst). Vul deze in per product, of gebruik een import via een spreadsheet als je veel producten hebt.

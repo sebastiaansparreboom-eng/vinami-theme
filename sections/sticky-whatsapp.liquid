@@ -1,0 +1,206 @@
+{% comment %}
+  sections/sticky-whatsapp.liquid
+  Zwevende WhatsApp-knop, rechtsonder in beeld op elke pagina.
+  Ingehaakt via {% section 'sticky-whatsapp' %} in layout/theme.liquid.
+{% endcomment %}
+
+{% liquid
+  assign phone_digits = section.settings.phone | replace: '+', '' | replace: ' ', '' | replace: '-', '' | replace: '(', '' | replace: ')', ''
+  assign wa_href = 'https://wa.me/' | append: phone_digits
+  if section.settings.message != blank
+    assign wa_href = wa_href | append: '?text=' | append: section.settings.message | url_encode
+  endif
+%}
+
+{%- if phone_digits != blank -%}
+  <a
+    href="{{ wa_href }}"
+    class="vinami-whatsapp-fab vinami-whatsapp-fab--{{ section.settings.position }}{% unless section.settings.show_on_mobile %} vinami-whatsapp-fab--hide-mobile{% endunless %}{% unless section.settings.show_on_desktop %} vinami-whatsapp-fab--hide-desktop{% endunless %}{% if section.settings.show_label %} vinami-whatsapp-fab--with-label{% endif %}"
+    target="_blank"
+    rel="noopener"
+    aria-label="{{ section.settings.aria_label | default: 'Stuur ons een WhatsApp-bericht' }}"
+  >
+    <svg
+      class="vinami-whatsapp-fab__icon"
+      aria-hidden="true"
+      focusable="false"
+      xmlns="http://www.w3.org/2000/svg"
+      width="28"
+      height="28"
+      viewBox="0 0 20 20"
+    >
+      {%- render 'icon', icon: 'whatsapp' -%}
+    </svg>
+    {%- if section.settings.show_label and section.settings.label != blank -%}
+      <span class="vinami-whatsapp-fab__label">{{ section.settings.label }}</span>
+    {%- endif -%}
+  </a>
+{%- endif -%}
+
+{% stylesheet %}
+  .vinami-whatsapp-fab {
+    position: fixed;
+    bottom: max(20px, env(safe-area-inset-bottom));
+    z-index: var(--layer-sticky);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    width: 52px;
+    height: 52px;
+    padding: 0;
+    border-radius: 999px;
+    background: #25d366;
+    color: #fff;
+    box-shadow: 0 6px 18px rgba(20, 18, 15, 0.28);
+    text-decoration: none;
+    transition: transform 0.15s ease, width 0.15s ease, padding 0.15s ease;
+  }
+
+  .vinami-whatsapp-fab:hover,
+  .vinami-whatsapp-fab:focus-visible {
+    transform: scale(1.05);
+  }
+
+  .vinami-whatsapp-fab--bottom-right {
+    right: max(20px, env(safe-area-inset-right));
+  }
+
+  .vinami-whatsapp-fab--bottom-left {
+    left: max(20px, env(safe-area-inset-left));
+  }
+
+  .vinami-whatsapp-fab__icon {
+    flex: 0 0 auto;
+    width: 28px;
+    height: 28px;
+    margin-inline: auto;
+  }
+
+  .vinami-whatsapp-fab--with-label {
+    width: auto;
+    padding-inline: 0.9rem;
+  }
+
+  .vinami-whatsapp-fab--with-label .vinami-whatsapp-fab__icon {
+    margin-inline: 0;
+  }
+
+  .vinami-whatsapp-fab__label {
+    font-family: var(--font-body--family);
+    font-size: var(--font-size--sm, 0.9rem);
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .vinami-whatsapp-fab--hide-mobile {
+    display: none;
+  }
+
+  .vinami-whatsapp-fab--hide-desktop {
+    display: none;
+  }
+
+  @media screen and (max-width: 749px) {
+    .vinami-whatsapp-fab {
+      bottom: max(16px, env(safe-area-inset-bottom));
+      width: 48px;
+      height: 48px;
+    }
+
+    .vinami-whatsapp-fab--bottom-right {
+      right: max(16px, env(safe-area-inset-right));
+    }
+
+    .vinami-whatsapp-fab--bottom-left {
+      left: max(16px, env(safe-area-inset-left));
+    }
+
+    .vinami-whatsapp-fab__label {
+      display: none;
+    }
+
+    .vinami-whatsapp-fab--hide-mobile {
+      display: none;
+    }
+
+    .vinami-whatsapp-fab--hide-desktop {
+      display: flex;
+    }
+  }
+
+  @media screen and (min-width: 750px) {
+    .vinami-whatsapp-fab--hide-desktop {
+      display: none;
+    }
+
+    .vinami-whatsapp-fab--hide-mobile {
+      display: flex;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Sticky WhatsApp-knop",
+  "settings": [
+    {
+      "type": "text",
+      "id": "phone",
+      "label": "WhatsApp-nummer",
+      "info": "Inclusief landcode, bv. +31612993707",
+      "default": "+31612993707"
+    },
+    {
+      "type": "textarea",
+      "id": "message",
+      "label": "Voorgevuld bericht",
+      "default": "Hoi Vinami! Ik heb een vraag over jullie wijnen."
+    },
+    {
+      "type": "text",
+      "id": "aria_label",
+      "label": "Toegankelijkheidslabel",
+      "default": "Stuur ons een WhatsApp-bericht"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_label",
+      "label": "Toon tekstlabel naast de knop (desktop)",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "label",
+      "label": "Labeltekst",
+      "default": "Vraag over wijn?"
+    },
+    {
+      "type": "select",
+      "id": "position",
+      "label": "Positie",
+      "options": [
+        { "value": "bottom-right", "label": "Rechtsonder" },
+        { "value": "bottom-left", "label": "Linksonder" }
+      ],
+      "default": "bottom-right"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_on_mobile",
+      "label": "Toon op mobiel",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_on_desktop",
+      "label": "Toon op desktop",
+      "default": true
+    }
+  ],
+  "presets": [
+    {
+      "name": "Sticky WhatsApp-knop"
+    }
+  ]
+}
+{% endschema %}
