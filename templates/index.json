@@ -60,10 +60,10 @@
       ],
       "name": "t:names.hero",
       "settings": {
-        "link": "",
-        "open_in_new_tab": false,
         "media_type_1": "image",
         "media_type_2": "image",
+        "link": "",
+        "open_in_new_tab": false,
         "content_direction": "column",
         "vertical_on_mobile": true,
         "horizontal_alignment": "space-between",
@@ -73,7 +73,7 @@
         "vertical_alignment_flex_direction_column": "flex-end",
         "gap": 20,
         "section_width": "page-width",
-        "section_height": "large",
+        "section_height": "small",
         "section_height_custom": 50,
         "color_scheme": "scheme-6",
         "toggle_overlay": true,
@@ -82,8 +82,8 @@
         "gradient_direction": "to bottom",
         "blurred_reflection": false,
         "reflection_opacity": 75,
-        "padding-block-start": 140,
-        "padding-block-end": 72
+        "padding-block-start": 100,
+        "padding-block-end": 48
       }
     },
     "product_list_qU3bEB": {
@@ -323,7 +323,7 @@
         "collection": "all",
         "layout_type": "grid",
         "carousel_on_mobile": false,
-        "max_products": 12,
+        "max_products": 8,
         "columns": 4,
         "mobile_columns": "2",
         "columns_gap": 12,
@@ -334,13 +334,12 @@
         "horizontal_alignment": "center",
         "gap": 40,
         "color_scheme": "scheme-1",
-        "padding-block-start": 64,
-        "padding-block-end": 112
+        "padding-block-start": 48,
+        "padding-block-end": 96
       }
     },
     "marquee_wijnregios": {
       "type": "marquee",
-      "name": "t:names.marquee",
       "blocks": {
         "text_region_0": {
           "type": "text",
@@ -665,6 +664,7 @@
         "text_region_7",
         "divider_7"
       ],
+      "name": "t:names.marquee",
       "settings": {
         "movement_direction": "normal",
         "color_scheme": "scheme-5",
@@ -675,7 +675,6 @@
     },
     "media_filosofie": {
       "type": "section",
-      "name": "t:names.section",
       "blocks": {
         "caption": {
           "type": "text",
@@ -733,7 +732,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>Vinami kiest wijnen zoals we ontwerpen: met aandacht voor herkomst, vakmanschap en een lange adem. Geen overbodige versiering, wel karakter — van het wijngoed tot in uw glas. Elke fles in onze collectie is persoonlijk geproefd en geselecteerd, in nauw contact met de wijnmakers zelf.</p>",
+            "text": "<p>Vinami kiest wijnen zoals we ontwerpen: met aandacht voor herkomst, vakmanschap en een lange adem. Geen overbodige versiering, wel karakter — van het wijngoed tot in uw glas.</p>",
             "width": "100%",
             "max_width": "narrow",
             "alignment": "center",
@@ -769,379 +768,15 @@
             "custom_width_mobile": 100
           },
           "blocks": {}
-        },
-        "stats": {
-          "type": "group",
-          "name": "Statistieken",
-          "settings": {
-            "link": "",
-            "open_in_new_tab": false,
-            "content_direction": "row",
-            "vertical_on_mobile": true,
-            "horizontal_alignment": "center",
-            "vertical_alignment": "center",
-            "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "center",
-            "vertical_alignment_flex_direction_column": "center",
-            "gap": 32,
-            "width": "fit-content",
-            "custom_width": 100,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "custom_height": 100,
-            "inherit_color_scheme": true,
-            "color_scheme": "",
-            "background_media": "none",
-            "video_position": "cover",
-            "background_image_position": "cover",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "toggle_overlay": false,
-            "overlay_color": "#00000026",
-            "overlay_style": "solid",
-            "gradient_direction": "to top",
-            "padding-block-start": 16,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0,
-            "padding_block_start": 8
-          },
-          "blocks": {
-            "stat_0": {
-              "type": "group",
-              "name": "Wijnhuizen",
-              "settings": {
-                "link": "",
-                "open_in_new_tab": false,
-                "content_direction": "column",
-                "vertical_on_mobile": true,
-                "horizontal_alignment": "center",
-                "vertical_alignment": "center",
-                "align_baseline": false,
-                "horizontal_alignment_flex_direction_column": "center",
-                "vertical_alignment_flex_direction_column": "center",
-                "gap": 4,
-                "width": "fit-content",
-                "custom_width": 100,
-                "width_mobile": "fill",
-                "custom_width_mobile": 100,
-                "height": "fit",
-                "custom_height": 100,
-                "inherit_color_scheme": true,
-                "color_scheme": "",
-                "background_media": "none",
-                "video_position": "cover",
-                "background_image_position": "cover",
-                "border": "none",
-                "border_width": 1,
-                "border_opacity": 100,
-                "border_radius": 0,
-                "toggle_overlay": false,
-                "overlay_color": "#00000026",
-                "overlay_style": "solid",
-                "gradient_direction": "to top",
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {
-                "num": {
-                  "type": "text",
-                  "name": "t:names.text",
-                  "settings": {
-                    "text": "<p>40+</p>",
-                    "width": "fit-content",
-                    "max_width": "normal",
-                    "alignment": "left",
-                    "type_preset": "h3",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "color": "var(--color-foreground)",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                },
-                "label": {
-                  "type": "text",
-                  "name": "t:names.text",
-                  "settings": {
-                    "text": "<p>Wijnhuizen</p>",
-                    "width": "fit-content",
-                    "max_width": "normal",
-                    "alignment": "left",
-                    "type_preset": "h6",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "color": "var(--color-foreground)",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "num",
-                "label"
-              ]
-            },
-            "stat_div_0": {
-              "type": "_divider",
-              "name": "t:names.divider",
-              "settings": {
-                "thickness": 1,
-                "corner_radius": "square",
-                "width_percent": 100,
-                "padding-block-start": 0,
-                "padding-block-end": 0
-              },
-              "blocks": {}
-            },
-            "stat_1": {
-              "type": "group",
-              "name": "Regio's",
-              "settings": {
-                "link": "",
-                "open_in_new_tab": false,
-                "content_direction": "column",
-                "vertical_on_mobile": true,
-                "horizontal_alignment": "center",
-                "vertical_alignment": "center",
-                "align_baseline": false,
-                "horizontal_alignment_flex_direction_column": "center",
-                "vertical_alignment_flex_direction_column": "center",
-                "gap": 4,
-                "width": "fit-content",
-                "custom_width": 100,
-                "width_mobile": "fill",
-                "custom_width_mobile": 100,
-                "height": "fit",
-                "custom_height": 100,
-                "inherit_color_scheme": true,
-                "color_scheme": "",
-                "background_media": "none",
-                "video_position": "cover",
-                "background_image_position": "cover",
-                "border": "none",
-                "border_width": 1,
-                "border_opacity": 100,
-                "border_radius": 0,
-                "toggle_overlay": false,
-                "overlay_color": "#00000026",
-                "overlay_style": "solid",
-                "gradient_direction": "to top",
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {
-                "num": {
-                  "type": "text",
-                  "name": "t:names.text",
-                  "settings": {
-                    "text": "<p>8</p>",
-                    "width": "fit-content",
-                    "max_width": "normal",
-                    "alignment": "left",
-                    "type_preset": "h3",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "color": "var(--color-foreground)",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                },
-                "label": {
-                  "type": "text",
-                  "name": "t:names.text",
-                  "settings": {
-                    "text": "<p>Regio's</p>",
-                    "width": "fit-content",
-                    "max_width": "normal",
-                    "alignment": "left",
-                    "type_preset": "h6",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "color": "var(--color-foreground)",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "num",
-                "label"
-              ]
-            },
-            "stat_div_1": {
-              "type": "_divider",
-              "name": "t:names.divider",
-              "settings": {
-                "thickness": 1,
-                "corner_radius": "square",
-                "width_percent": 100,
-                "padding-block-start": 0,
-                "padding-block-end": 0
-              },
-              "blocks": {}
-            },
-            "stat_2": {
-              "type": "group",
-              "name": "Handgeselecteerd",
-              "settings": {
-                "link": "",
-                "open_in_new_tab": false,
-                "content_direction": "column",
-                "vertical_on_mobile": true,
-                "horizontal_alignment": "center",
-                "vertical_alignment": "center",
-                "align_baseline": false,
-                "horizontal_alignment_flex_direction_column": "center",
-                "vertical_alignment_flex_direction_column": "center",
-                "gap": 4,
-                "width": "fit-content",
-                "custom_width": 100,
-                "width_mobile": "fill",
-                "custom_width_mobile": 100,
-                "height": "fit",
-                "custom_height": 100,
-                "inherit_color_scheme": true,
-                "color_scheme": "",
-                "background_media": "none",
-                "video_position": "cover",
-                "background_image_position": "cover",
-                "border": "none",
-                "border_width": 1,
-                "border_opacity": 100,
-                "border_radius": 0,
-                "toggle_overlay": false,
-                "overlay_color": "#00000026",
-                "overlay_style": "solid",
-                "gradient_direction": "to top",
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {
-                "num": {
-                  "type": "text",
-                  "name": "t:names.text",
-                  "settings": {
-                    "text": "<p>100%</p>",
-                    "width": "fit-content",
-                    "max_width": "normal",
-                    "alignment": "left",
-                    "type_preset": "h3",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "color": "var(--color-foreground)",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                },
-                "label": {
-                  "type": "text",
-                  "name": "t:names.text",
-                  "settings": {
-                    "text": "<p>Handgeselecteerd</p>",
-                    "width": "fit-content",
-                    "max_width": "normal",
-                    "alignment": "left",
-                    "type_preset": "h6",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "color": "var(--color-foreground)",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "num",
-                "label"
-              ]
-            }
-          },
-          "block_order": [
-            "stat_0",
-            "stat_div_0",
-            "stat_1",
-            "stat_div_1",
-            "stat_2"
-          ]
         }
       },
       "block_order": [
         "caption",
         "heading",
         "text",
-        "stats",
         "button"
       ],
+      "name": "t:names.section",
       "settings": {
         "content_direction": "column",
         "vertical_on_mobile": true,
@@ -1150,21 +785,19 @@
         "align_baseline": false,
         "horizontal_alignment_flex_direction_column": "center",
         "vertical_alignment_flex_direction_column": "center",
-        "gap": 32,
+        "gap": 20,
         "section_width": "page-width",
         "section_height": "",
         "color_scheme": "scheme-3",
         "background_media": "none",
         "video_position": "cover",
         "background_image_position": "cover",
-        "padding-block-start": 120,
-        "padding-block-end": 120,
-        "padding_block_start": 96
+        "padding-block-start": 96,
+        "padding-block-end": 96
       }
     },
     "media_horeca": {
       "type": "section",
-      "name": "t:names.section",
       "blocks": {
         "caption": {
           "type": "text",
@@ -1222,7 +855,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>Restaurant, wijnbar of speciaalzaak? Wij stellen samen met u een wijnkaart samen, met zakelijke voorwaarden, flexibele levering en persoonlijk advies van onze sommelier.</p>",
+            "text": "<p>Restaurant, wijnbar of speciaalzaak? Wij stellen samen met u een wijnkaart samen, met zakelijke voorwaarden en persoonlijk advies.</p>",
             "width": "100%",
             "max_width": "narrow",
             "alignment": "center",
@@ -1266,6 +899,7 @@
         "text",
         "button"
       ],
+      "name": "t:names.section",
       "settings": {
         "content_direction": "column",
         "vertical_on_mobile": true,
@@ -1281,13 +915,12 @@
         "background_media": "none",
         "video_position": "cover",
         "background_image_position": "cover",
-        "padding-block-start": 130,
-        "padding-block-end": 130
+        "padding-block-start": 96,
+        "padding-block-end": 96
       }
     },
     "categorie_grid": {
       "type": "section",
-      "name": "t:names.section",
       "blocks": {
         "heading": {
           "type": "text",
@@ -1367,7 +1000,7 @@
                 "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "center",
                 "vertical_alignment_flex_direction_column": "center",
-                "gap": 8,
+                "gap": 12,
                 "width": "fill",
                 "custom_width": 100,
                 "width_mobile": "fill",
@@ -1387,11 +1020,10 @@
                 "overlay_color": "#00000026",
                 "overlay_style": "solid",
                 "gradient_direction": "to top",
-                "padding-block-start": 100,
-                "padding-block-end": 100,
+                "padding-block-start": 72,
+                "padding-block-end": 72,
                 "padding-inline-start": 16,
-                "padding-inline-end": 16,
-                "padding_block_start": 72
+                "padding-inline-end": 16
               },
               "blocks": {
                 "label": {
@@ -1419,44 +1051,17 @@
                     "padding-inline-end": 0
                   },
                   "blocks": {}
-                },
-                "sub": {
-                  "type": "text",
-                  "name": "t:names.text",
-                  "settings": {
-                    "text": "<p>Vol & kruidig</p>",
-                    "width": "fit-content",
-                    "max_width": "normal",
-                    "alignment": "left",
-                    "type_preset": "custom",
-                    "font": "var(--font-body--family)",
-                    "font_size": "0.75rem",
-                    "line_height": "tight",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "nowrap",
-                    "color": "var(--color-foreground)",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
                 }
               },
               "block_order": [
-                "label",
-                "sub"
+                "label"
               ]
             },
             "tile_1": {
               "type": "group",
               "name": "Wit",
               "settings": {
-                "link": "shopify://collections/wit",
+                "link": "shopify://collections/witte-wijn",
                 "open_in_new_tab": false,
                 "content_direction": "column",
                 "vertical_on_mobile": true,
@@ -1465,7 +1070,7 @@
                 "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "center",
                 "vertical_alignment_flex_direction_column": "center",
-                "gap": 8,
+                "gap": 12,
                 "width": "fill",
                 "custom_width": 100,
                 "width_mobile": "fill",
@@ -1485,11 +1090,10 @@
                 "overlay_color": "#00000026",
                 "overlay_style": "solid",
                 "gradient_direction": "to top",
-                "padding-block-start": 100,
-                "padding-block-end": 100,
+                "padding-block-start": 72,
+                "padding-block-end": 72,
                 "padding-inline-start": 16,
-                "padding-inline-end": 16,
-                "padding_block_start": 72
+                "padding-inline-end": 16
               },
               "blocks": {
                 "label": {
@@ -1517,37 +1121,10 @@
                     "padding-inline-end": 0
                   },
                   "blocks": {}
-                },
-                "sub": {
-                  "type": "text",
-                  "name": "t:names.text",
-                  "settings": {
-                    "text": "<p>Fris & aromatisch</p>",
-                    "width": "fit-content",
-                    "max_width": "normal",
-                    "alignment": "left",
-                    "type_preset": "custom",
-                    "font": "var(--font-body--family)",
-                    "font_size": "0.75rem",
-                    "line_height": "tight",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "nowrap",
-                    "color": "var(--color-foreground)",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
                 }
               },
               "block_order": [
-                "label",
-                "sub"
+                "label"
               ]
             },
             "tile_2": {
@@ -1563,7 +1140,7 @@
                 "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "center",
                 "vertical_alignment_flex_direction_column": "center",
-                "gap": 8,
+                "gap": 12,
                 "width": "fill",
                 "custom_width": 100,
                 "width_mobile": "fill",
@@ -1583,11 +1160,10 @@
                 "overlay_color": "#00000026",
                 "overlay_style": "solid",
                 "gradient_direction": "to top",
-                "padding-block-start": 100,
-                "padding-block-end": 100,
+                "padding-block-start": 72,
+                "padding-block-end": 72,
                 "padding-inline-start": 16,
-                "padding-inline-end": 16,
-                "padding_block_start": 72
+                "padding-inline-end": 16
               },
               "blocks": {
                 "label": {
@@ -1615,44 +1191,17 @@
                     "padding-inline-end": 0
                   },
                   "blocks": {}
-                },
-                "sub": {
-                  "type": "text",
-                  "name": "t:names.text",
-                  "settings": {
-                    "text": "<p>Licht & zomers</p>",
-                    "width": "fit-content",
-                    "max_width": "normal",
-                    "alignment": "left",
-                    "type_preset": "custom",
-                    "font": "var(--font-body--family)",
-                    "font_size": "0.75rem",
-                    "line_height": "tight",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "nowrap",
-                    "color": "var(--color-foreground)",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
                 }
               },
               "block_order": [
-                "label",
-                "sub"
+                "label"
               ]
             },
             "tile_3": {
               "type": "group",
               "name": "Mousserend",
               "settings": {
-                "link": "shopify://collections/mousserend",
+                "link": "shopify://collections/mousserende-wijn",
                 "open_in_new_tab": false,
                 "content_direction": "column",
                 "vertical_on_mobile": true,
@@ -1661,7 +1210,7 @@
                 "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "center",
                 "vertical_alignment_flex_direction_column": "center",
-                "gap": 8,
+                "gap": 12,
                 "width": "fill",
                 "custom_width": 100,
                 "width_mobile": "fill",
@@ -1681,11 +1230,10 @@
                 "overlay_color": "#00000026",
                 "overlay_style": "solid",
                 "gradient_direction": "to top",
-                "padding-block-start": 100,
-                "padding-block-end": 100,
+                "padding-block-start": 72,
+                "padding-block-end": 72,
                 "padding-inline-start": 16,
-                "padding-inline-end": 16,
-                "padding_block_start": 72
+                "padding-inline-end": 16
               },
               "blocks": {
                 "label": {
@@ -1713,37 +1261,10 @@
                     "padding-inline-end": 0
                   },
                   "blocks": {}
-                },
-                "sub": {
-                  "type": "text",
-                  "name": "t:names.text",
-                  "settings": {
-                    "text": "<p>Feestelijk & fijn</p>",
-                    "width": "fit-content",
-                    "max_width": "normal",
-                    "alignment": "left",
-                    "type_preset": "custom",
-                    "font": "var(--font-body--family)",
-                    "font_size": "0.75rem",
-                    "line_height": "tight",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "nowrap",
-                    "color": "var(--color-foreground)",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
                 }
               },
               "block_order": [
-                "label",
-                "sub"
+                "label"
               ]
             },
             "tile_4": {
@@ -1759,7 +1280,7 @@
                 "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "center",
                 "vertical_alignment_flex_direction_column": "center",
-                "gap": 8,
+                "gap": 12,
                 "width": "fill",
                 "custom_width": 100,
                 "width_mobile": "fill",
@@ -1779,11 +1300,10 @@
                 "overlay_color": "#00000026",
                 "overlay_style": "solid",
                 "gradient_direction": "to top",
-                "padding-block-start": 100,
-                "padding-block-end": 100,
+                "padding-block-start": 72,
+                "padding-block-end": 72,
                 "padding-inline-start": 16,
-                "padding-inline-end": 16,
-                "padding_block_start": 72
+                "padding-inline-end": 16
               },
               "blocks": {
                 "label": {
@@ -1811,37 +1331,10 @@
                     "padding-inline-end": 0
                   },
                   "blocks": {}
-                },
-                "sub": {
-                  "type": "text",
-                  "name": "t:names.text",
-                  "settings": {
-                    "text": "<p>Diep & stroperig</p>",
-                    "width": "fit-content",
-                    "max_width": "normal",
-                    "alignment": "left",
-                    "type_preset": "custom",
-                    "font": "var(--font-body--family)",
-                    "font_size": "0.75rem",
-                    "line_height": "tight",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "nowrap",
-                    "color": "var(--color-foreground)",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
                 }
               },
               "block_order": [
-                "label",
-                "sub"
+                "label"
               ]
             }
           },
@@ -1858,6 +1351,7 @@
         "heading",
         "row"
       ],
+      "name": "t:names.section",
       "settings": {
         "content_direction": "column",
         "vertical_on_mobile": true,
@@ -1866,20 +1360,19 @@
         "align_baseline": false,
         "horizontal_alignment_flex_direction_column": "center",
         "vertical_alignment_flex_direction_column": "center",
-        "gap": 40,
+        "gap": 32,
         "section_width": "page-width",
         "section_height": "",
         "color_scheme": "scheme-1",
         "background_media": "none",
         "video_position": "cover",
         "background_image_position": "cover",
-        "padding-block-start": 96,
-        "padding-block-end": 96
+        "padding-block-start": 64,
+        "padding-block-end": 64
       }
     },
     "vertrouwenbalk": {
       "type": "section",
-      "name": "t:names.section",
       "blocks": {
         "item_0": {
           "type": "group",
@@ -2255,6 +1748,7 @@
         "div_2",
         "item_3"
       ],
+      "name": "t:names.section",
       "settings": {
         "content_direction": "row",
         "vertical_on_mobile": true,
@@ -2270,88 +1764,8 @@
         "background_media": "none",
         "video_position": "cover",
         "background_image_position": "cover",
-        "padding-block-start": 40,
-        "padding-block-end": 40
-      }
-    },
-    "citaat": {
-      "type": "section",
-      "name": "t:names.section",
-      "blocks": {
-        "quote": {
-          "type": "text",
-          "name": "t:names.text",
-          "settings": {
-            "text": "<p>“Een fles wijn bevat meer filosofie dan alle boeken ter wereld.”</p>",
-            "width": "100%",
-            "max_width": "narrow",
-            "alignment": "center",
-            "type_preset": "custom",
-            "font": "var(--font-heading--family)",
-            "font_size": "2.5rem",
-            "line_height": "tight",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "color": "var(--color-foreground)",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
-        "attribution": {
-          "type": "text",
-          "name": "t:names.text",
-          "settings": {
-            "text": "<p>Louis Pasteur</p>",
-            "width": "100%",
-            "max_width": "normal",
-            "alignment": "center",
-            "type_preset": "h6",
-            "font": "var(--font-body--family)",
-            "font_size": "1rem",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "color": "var(--color-foreground)",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "quote",
-        "attribution"
-      ],
-      "settings": {
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "center",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "center",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 16,
-        "section_width": "page-width",
-        "section_height": "",
-        "color_scheme": "scheme-1",
-        "background_media": "none",
-        "video_position": "cover",
-        "background_image_position": "cover",
-        "padding-block-start": 100,
-        "padding-block-end": 100
+        "padding-block-start": 32,
+        "padding-block-end": 32
       }
     }
   },
@@ -2360,7 +1774,6 @@
     "marquee_wijnregios",
     "categorie_grid",
     "media_filosofie",
-    "citaat",
     "product_list_qU3bEB",
     "vertrouwenbalk",
     "media_horeca"
